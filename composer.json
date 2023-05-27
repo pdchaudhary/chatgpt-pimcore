@@ -4,7 +4,8 @@
     "type": "pimcore-bundle",
     "require": {
         "pimcore/pimcore": ">=10.0",
-        "php": ">=8.0"
+        "php": ">=8.0",
+        "openai-php/client": "^0.5.0"
     },
     "keywords": [
         "pimcore",
