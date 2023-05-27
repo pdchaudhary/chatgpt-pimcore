@@ -7,7 +7,7 @@ The integration of Pimcore and ChatGPT offers a powerful solution to enhance pro
 
 
 ```bash
-composer require pdchaudhary/lokalise-pimcore
+composer require pdchaudhary/chatgpt-pimcore
 ``` 
 
 # Installation
