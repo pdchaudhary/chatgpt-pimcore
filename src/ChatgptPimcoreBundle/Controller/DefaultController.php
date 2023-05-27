@@ -104,10 +104,10 @@ class DefaultController extends FrontendController
             // Get the class definition
             $class = $object->getClass();
 
-            $description = "Write ".$class->getName()." ".$field." for following information in ".$language.":-\n";
+            $description = "Write ".$class->getName()." ".$field." for following information";
 
             if($language){
-                $description .="in ".$language;
+                $description .=" in ".$language;
             }
             $description .=":-\n";
             // Get the field definitions
