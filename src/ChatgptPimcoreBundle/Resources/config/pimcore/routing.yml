@@ -1,0 +1,5 @@
+deepl_translation:
+    resource: "@ChatgptPimcoreBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

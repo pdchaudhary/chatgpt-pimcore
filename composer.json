@@ -1,0 +1,40 @@
+{
+    "name": "pdchaudhary/chatgpt-pimcore",
+    "description": "Enhance product data quality and streamline content creation with the Pimcore and ChatGPT integration.",
+    "type": "pimcore-bundle",
+    "require": {
+        "pimcore/pimcore": ">=10.0",
+        "php": ">=8.0"
+    },
+    "keywords": [
+        "pimcore",
+        "pimcore-plugin",
+        "marketplace",
+        "e-commerce",
+        "ChatGPT",
+        "OpenAI",
+        "Product Data Quality by Using ChatGPT AI",
+        "Machine generated"
+      ],
+    "homepage": "https://pravinchaudhary.com",
+    "autoload": {
+        "psr-4": {
+          "Pdchaudhary\\ChatgptPimcoreBundle\\": "src/ChatgptPimcoreBundle"
+        }
+    },
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Pravin Chaudhary",
+            "email": "pdchaudhary1998@gmail.com"
+        }
+    ],
+    "extra": {
+        "pimcore": {
+          "bundles": [
+            "Pdchaudhary\\ChatgptPimcoreBundle\\ChatgptPimcoreBundle"
+          ]
+        }
+    },
+    "minimum-stability": "dev"
+}
