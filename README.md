@@ -15,7 +15,21 @@ composer require pdchaudhary/chatgpt-pimcore:1.4
 
 ```bash
 composer require pdchaudhary/chatgpt-pimcore
-``` 
+```
+Make sure the bundle is enabled in the config/bundles.php file. The following lines should be added:
+
+```php
+// ...
+return [
+    // ...
+    Pdchaudhary\ChatgptPimcoreBundle\ChatgptPimcoreBundle::class => ['all' => true]
+    // ...
+];
+```
+Install the assets:
+```bash
+php bin/console assets:install
+```
 
 # Installation
 
