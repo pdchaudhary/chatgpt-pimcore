@@ -81,7 +81,7 @@ class DefaultController extends FrontendController
 
             }
         }
-        return JsonResponse::create([
+        return new JsonResponse([
             "data" =>  $fieldItems
         ]);
 
@@ -166,7 +166,7 @@ class DefaultController extends FrontendController
             }
         }
 
-        return JsonResponse::create([
+        return new JsonResponse([
             "data" =>  $description
         ]);
 
@@ -188,7 +188,7 @@ class DefaultController extends FrontendController
         $apiKey = $this->getChatGPTAuthKey();
 
         if(empty( $apiKey)){
-            return JsonResponse::create([
+            return new JsonResponse([
                 "success" =>  false,
                 "message" => "The instruction states to generate an API key from OpenAI and add the generated key, labeled as 'chatgpt_auth_key', in the website settings. This key is likely used for authentication purposes to interact with OpenAI's ChatGPT API. By following this instruction, you can obtain the necessary credentials to authenticate and access the API, enabling communication with the ChatGPT model on your website or application."
             ]);
@@ -215,12 +215,12 @@ class DefaultController extends FrontendController
                 $object->{'set'.ucwords($field)}($text);
             }
             $object->save();
-            return JsonResponse::create([
+            return new JsonResponse([
                 "success" =>  true,
                 "message" => "The field data was successfully updated using the ChatGPT."
             ]);
         }else{
-            return JsonResponse::create([
+            return new JsonResponse([
                 "success" =>  false,
                 "message" => "The AI did not provide any data or information based on description."
             ]);

@@ -1,52 +1,36 @@
-pimcore.registerNS("pimcore.plugin.ChatgptPimcoreBundle");
 
-pimcore.plugin.ChatgptPimcoreBundle = Class.create(pimcore.plugin.admin, {
-    getClassName: function () {
-        return "pimcore.plugin.ChatgptPimcoreBundle";
-    },
+pimcore.registerNS("pimcore.plugin.ChatgptPimcoreBundlePlugin");
+
+pimcore.plugin.ChatgptPimcoreBundlePlugin = Class.create({
 
     initialize: function () {
-        pimcore.plugin.broker.registerPlugin(this);
+        document.addEventListener(pimcore.events.postOpenObject, this.postOpenObject.bind(this));
     },
 
-    pimcoreReady: function (params, broker) {
-        // alert("ChatgptPimcoreBundle ready!");
-    },
-
-    postOpenObject: function (object, type) {
-        /* add quickTranslate icon to objects with localizedfields */
-
-        if (type === "object") {
-           
-
-
-            menuParent = object.toolbar;
-            var menu =   {
-                xtype: 'button',
-                text: t('ChatGPT'),
-                iconCls: 'pimcore-chat-gpt-icon',
-                
-                listeners: {
-                    click: function( menu, item, e, eOpts ) {
-                        openPopupModal(object);
+    postOpenObject: function (e, type) {
+     
+            var { object, type } = e.detail;
+            if(type == "object"){
+                var menuParent = object.toolbar;
+                var menu =   {
+                    xtype: 'button',
+                    text: t('ChatGPT'),
+                    iconCls: 'pimcore-chat-gpt-icon',
+                    
+                    listeners: {
+                        click: function( menu, item, e, eOpts ) {
+                            openPopupModal(object);
+                        }
                     }
-                }
-               
-            };
-            menuParent.add(menu);
+                
+                };
+                menuParent.add(menu);
+            }
+            
 
-               
-           
-        }
+      
         
     },
-
-
-    
-
-
-    
 });
 
-var ChatgptPimcoreBundlePlugin = new pimcore.plugin.ChatgptPimcoreBundle();
-
+var chatgptPimcoreBundlePlugin = new pimcore.plugin.ChatgptPimcoreBundlePlugin();
