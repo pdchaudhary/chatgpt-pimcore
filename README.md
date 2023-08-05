@@ -6,6 +6,13 @@ Enhance product data quality and streamline content creation with the Pimcore an
 The integration of Pimcore and ChatGPT offers a powerful solution to enhance product data quality and streamline content creation processes. By leveraging this integration, businesses can optimize their data management workflows and improve the accuracy and consistency of product information. ChatGPT, a sophisticated language model, utilizes attribute-based inputs to generate detailed descriptions automatically. This integration empowers organizations to efficiently create high-quality content, resulting in enhanced customer experiences and improved productivity.
 
 
+* Pimcore 10.6
+
+```bash
+composer require pdchaudhary/chatgpt-pimcore:1.4
+``` 
+* Pimcore 11
+
 ```bash
 composer require pdchaudhary/chatgpt-pimcore
 ``` 
