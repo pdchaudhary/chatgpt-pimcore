@@ -1,6 +1,15 @@
 # chatgpt-pimcore
 Enhance product data quality and streamline content creation with the Pimcore and ChatGPT integration.
 
+## Pro Package
+
+Introducing the Pro Package! Unlock advanced features and supercharge your experience:
+
+- **ChatGPT API Integration**: Utilize the latest ChatGPT API for enhanced interactions.
+- **Bulk Update Feature**: Update multiple items at once for increased efficiency.
+
+  For more information about our Pro Package and its benefits, contact us at pdchaudhary1998@gmail.com.
+
 # Overview
 
 The integration of Pimcore and ChatGPT offers a powerful solution to enhance product data quality and streamline content creation processes. By leveraging this integration, businesses can optimize their data management workflows and improve the accuracy and consistency of product information. ChatGPT, a sophisticated language model, utilizes attribute-based inputs to generate detailed descriptions automatically. This integration empowers organizations to efficiently create high-quality content, resulting in enhanced customer experiences and improved productivity.
