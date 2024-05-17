@@ -7,6 +7,9 @@ Introducing the Pro Package! Unlock advanced features and supercharge your exper
 
 - **ChatGPT API Integration**: Utilize the latest ChatGPT API for enhanced interactions.
 - **Bulk Update Feature**: Update multiple items at once for increased efficiency.
+- **SEO Optimization**: Optimize metadata and on-page SEO elements for products and content, improving search engine rankings and visibility
+- **Content Tagging**: Automatically tag and categorize content, enhancing searchability and organization.
+- **Workflow Setup**: Proofreading chatgpt content
 
   For more information about our Pro Package and its benefits, contact us at pdchaudhary1998@gmail.com.
 
