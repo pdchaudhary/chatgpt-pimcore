@@ -183,8 +183,13 @@ class DefaultController extends FrontendController
         $field = $request->get('field');
         $lang = $request->get('lang');
         $max_tokens = $request->get('max_tokens');
-
-      
+        $object = DataObject::getById((int)$objectId);
+        if (!$object->isAllowed('view')) {
+            return new JsonResponse([
+                "success" =>  false,
+                "message" => "Access denied"
+            ]);
+        }
         $apiKey = $this->getChatGPTAuthKey();
 
         if(empty( $apiKey)){
@@ -195,6 +200,13 @@ class DefaultController extends FrontendController
         }
         $client =  OpenAI::client($apiKey);
         $model = $this->getChatGPTModal();
+
+        if(empty( $model)){
+            return new JsonResponse([
+                "success" =>  false,
+                "message" => "labeled as 'chatgpt_model', in the website settings. This key is likely used for model purposes to interact with OpenAI's ChatGPT API."
+            ]);
+        }
         $result = $client->completions()->create([
             'model' => $model,
             'prompt' => $description,
@@ -207,7 +219,9 @@ class DefaultController extends FrontendController
         if(isset($response['choices']) && !empty($response['choices'])){
             $text = $response['choices'][0]['text'];
         }
-        $object = DataObject::getById((int)$objectId);
+       
+
+        
         if($text){
             if($lang){
                 $object->{'set'.ucwords($field)}($text,$lang);
