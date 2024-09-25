@@ -26,13 +26,7 @@ class ChatgptPimcoreBundle extends AbstractPimcoreBundle  implements PimcoreBund
     }
 
 
-    public function getEditmodeJsPaths() : array{
-        return [
-            '/bundles/chatgptpimcore/js/pimcore/startup.js',
-            '/bundles/chatgptpimcore/js/pimcore/openPopupModal.js',
-        ];
-    }
-
+ 
     public function getCssPaths(): array
     {
         return [

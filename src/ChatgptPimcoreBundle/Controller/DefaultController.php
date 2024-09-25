@@ -194,9 +194,9 @@ class DefaultController extends FrontendController
             ]);
         }
         $client =  OpenAI::client($apiKey);
-
+        $model = $this->getChatGPTModal();
         $result = $client->completions()->create([
-            'model' => 'text-davinci-003',
+            'model' => $model,
             'prompt' => $description,
             'max_tokens' => (int)$max_tokens,
             'temperature' => 0.0
@@ -234,6 +234,13 @@ class DefaultController extends FrontendController
     public function getChatGPTAuthKey(){
         $authKey = WebsiteSetting::getByName("chatgpt_auth_key") ? WebsiteSetting::getByName("chatgpt_auth_key")->getData() : null;
         return $authKey;
+    }
+
+    public function getChatGPTModal(){
+
+        $chatgptModel = WebsiteSetting::getByName("chatgpt_model") ? WebsiteSetting::getByName("chatgpt_model")->getData() : null;
+        return $chatgptModel;
+       
     }
     
 }
