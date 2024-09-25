@@ -1,6 +1,18 @@
 # chatgpt-pimcore
 Enhance product data quality and streamline content creation with the Pimcore and ChatGPT integration.
 
+## Pro Package
+
+Introducing the Pro Package! Unlock advanced features and supercharge your experience:
+
+- **ChatGPT API Integration**: Utilize the latest ChatGPT API for enhanced interactions.
+- **Bulk Update Feature**: Update multiple items at once for increased efficiency.
+- **SEO Optimization**: Optimize metadata and on-page SEO elements for products and content, improving search engine rankings and visibility
+- **Content Tagging**: Automatically tag and categorize content, enhancing searchability and organization.
+- **Workflow Setup**: Proofreading chatgpt content
+
+  For more information about our Pro Package and its benefits, contact us at pdchaudhary1998@gmail.com.
+
 # Overview
 
 The integration of Pimcore and ChatGPT offers a powerful solution to enhance product data quality and streamline content creation processes. By leveraging this integration, businesses can optimize their data management workflows and improve the accuracy and consistency of product information. ChatGPT, a sophisticated language model, utilizes attribute-based inputs to generate detailed descriptions automatically. This integration empowers organizations to efficiently create high-quality content, resulting in enhanced customer experiences and improved productivity.
@@ -15,7 +27,21 @@ composer require pdchaudhary/chatgpt-pimcore:1.4
 
 ```bash
 composer require pdchaudhary/chatgpt-pimcore
-``` 
+```
+Make sure the bundle is enabled in the config/bundles.php file. The following lines should be added:
+
+```php
+// ...
+return [
+    // ...
+    Pdchaudhary\ChatgptPimcoreBundle\ChatgptPimcoreBundle::class => ['all' => true]
+    // ...
+];
+```
+Install the assets:
+```bash
+php bin/console assets:install
+```
 
 # Installation
 
